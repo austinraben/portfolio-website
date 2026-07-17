@@ -4,7 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Austin Raben</title>
-  <meta name="description" content="Austin Raben — Network technician and computer science graduate, CCNA certified. Networking and software projects." />
+  <meta name="description" content="Austin Raben — CCNA certified network technician and computer science graduate. Networking and software projects." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Austin Raben" />
+  <meta property="og:description" content="CCNA certified network technician and computer science graduate. Strong in networking, well-rounded across software." />
+  <meta property="og:url" content="https://austinraben.com" />
+  <meta property="og:image" content="https://austinraben.com/computa-desktop.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Austin Raben" />
+  <meta name="twitter:description" content="CCNA certified network technician and computer science graduate." />
+  <meta name="twitter:image" content="https://austinraben.com/computa-desktop.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -45,6 +55,11 @@
         <a href="mailto:austin@austinraben.com">Email</a>
       </div>
     </section>
+
+    <!-- Aesthetic band -->
+    <div class="photo-band">
+      <img src="network-cabling.jpg" loading="lazy" alt="Ethernet cabling terminated into a network switch" />
+    </div>
 
     <!-- PROJECTS -->
     <section id="work" class="section">
@@ -136,15 +151,12 @@
               </p>
               <ul class="tags"><li>Java</li><li>OOP</li><li>MVC</li></ul>
             </div>
-            <a class="detail-repo" href="https://github.com/austinraben/music-library-system">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 33V13l17-4v18" />
-                  <circle cx="15" cy="33" r="5" /><circle cx="32" cy="29" r="5" />
-                </svg>
-              </span>
-              <span class="detail-repo-label">View Repository</span>
-            </a>
+            <div class="detail-media">
+              <a class="media-img" href="music-uml.png" target="_blank" rel="noopener">
+                <img src="music-uml.png" loading="lazy" alt="UML class diagram for the music library system" />
+              </a>
+              <span class="media-caption">UML class diagram &middot; <a href="https://github.com/austinraben/music-library-system">View Repository</a></span>
+            </div>
           </div>
         </article>
 
@@ -165,15 +177,13 @@
               </p>
               <ul class="tags"><li>Cisco</li><li>Python</li><li>Netmiko</li></ul>
             </div>
-            <a class="detail-repo" href="https://github.com/austinraben/enterprise-network-automation">
-              <span class="icon" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="24" cy="10" r="4.5" /><circle cx="11" cy="37" r="4.5" /><circle cx="37" cy="37" r="4.5" />
-                  <line x1="22" y1="14" x2="13" y2="33" /><line x1="26" y1="14" x2="35" y2="33" /><line x1="15.5" y1="37" x2="32.5" y2="37" />
-                </svg>
-              </span>
-              <span class="detail-repo-label">View Repository</span>
-            </a>
+            <div class="detail-media">
+              <a class="media-img video-thumb" href="https://youtu.be/D7QOxmmnj3Q" target="_blank" rel="noopener">
+                <img src="network-demo-thumb.jpg" loading="lazy" alt="Enterprise network automation demo video" />
+                <span class="play" aria-hidden="true"></span>
+              </a>
+              <span class="media-caption"><a href="https://youtu.be/D7QOxmmnj3Q">Watch demo</a> &middot; <a href="https://github.com/austinraben/enterprise-network-automation">Repository</a></span>
+            </div>
           </div>
         </article>
 
@@ -231,6 +241,8 @@
             testers, and certification testers. I maintain MDF, IDF, and server
             room standards including rack layout, labeling, and cable management,
             handle TV installations, and keep clients updated through each job.
+            The work has sharpened my troubleshooting instincts, attention to
+            detail, and comfort communicating with clients under pressure.
           </p>
         </article>
         <article class="entry">
@@ -243,13 +255,19 @@
             Melendez, the first Eller College professor named a University
             Distinguished Outreach Professor. I graded memos, proctored
             early-morning exams, held office hours, and attended ethics workshops.
+            It strengthened my communication, mentoring, and dependability, and
+            gave me a firsthand look at how ethics plays out inside real
+            organizations.
           </p>
         </article>
-        <article class="entry">
-          <div class="entry-head">
-            <h3 class="entry-role">B.S. Computer Science, Minor in Business Administration</h3>
-            <span class="entry-meta">University of Arizona &middot; Tucson, Arizona &middot; 2022 to 2026</span>
+        <article class="entry entry-with-photo">
+          <div class="entry-main">
+            <div class="entry-head">
+              <h3 class="entry-role">B.S. Computer Science, Minor in Business Administration</h3>
+              <span class="entry-meta">University of Arizona &middot; Tucson, Arizona &middot; 2022 to 2026</span>
+            </div>
           </div>
+          <img class="entry-photo" src="graduation.jpg" loading="lazy" alt="Austin Raben at University of Arizona graduation" />
         </article>
       </div>
     </section>
@@ -322,7 +340,11 @@
     <!-- ABOUT -->
     <section id="about" class="section">
       <h2 class="section-display">About</h2>
-      <div class="prose">
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="headshot.jpg" loading="lazy" alt="Austin Raben" />
+        </div>
+        <div class="prose">
         <p>
           I am a computer science graduate of the University of Arizona, where I
           also minored in business administration. My focus is networking: I
@@ -340,6 +362,7 @@
           austinraben.com. When I build something, I take it all the way to
           running in the real world, not just working on my laptop.
         </p>
+        </div>
       </div>
     </section>
 
