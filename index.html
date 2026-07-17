@@ -17,7 +17,7 @@
   <meta name="twitter:image" content="https://austinraben.com/computa-desktop.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -25,7 +25,8 @@
   <header class="site-header">
     <a href="#top" class="brand">Austin Raben</a>
     <nav class="nav">
-      <a href="#work">Projects</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
@@ -35,17 +36,13 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <h1 class="display">Austin Raben</h1>
-      <p class="hero-tag">
-        CCNA certified network technician and computer science graduate, with a
-        business administration minor. Networking is my strength, and I am
-        well-rounded across software and computer science, from configuring and
-        automating networks to building and shipping full applications.
-      </p>
+      <h1 class="display">welcome to my<br><em>portfolio</em></h1>
       <div class="hero-meta">
-        <span>University of Arizona</span>
+        <span>Austin Raben</span>
         <span class="dot">&middot;</span>
-        <span>Open to relocation for full-time roles</span>
+        <span>CCNA Certified</span>
+        <span class="dot">&middot;</span>
+        <span>Open to relocation</span>
       </div>
       <div class="hero-links">
         <a href="https://github.com/austinraben">GitHub</a>
@@ -56,14 +53,38 @@
       </div>
     </section>
 
-    <!-- Aesthetic band -->
-    <div class="photo-band">
-      <img src="network-cabling.jpg" loading="lazy" alt="Ethernet cabling terminated into a network switch" />
-    </div>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="section-display">Who is Austin</h2>
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="headshot.jpg" alt="Austin Raben" />
+        </div>
+        <div class="prose">
+          <p>
+            I am a computer science graduate of the University of Arizona, where I
+            also minored in business administration. My focus is networking: I
+            earned my CCNA and work as a network technician at RabenIT, handling
+            layer 1 and layer 2 infrastructure and helping people make sense of
+            their technology.
+          </p>
+          <p>
+            I like understanding systems all the way down, from the
+            object-oriented design of an application to the physical and data-link
+            layers of a network. Off the clock I am laid back and easy to work
+            with, a big sports fan (basketball, football, and baseball, which is
+            part of what drew me to the baseball analytics work), and I run my own
+            corner of the internet, including this site and my email at
+            austinraben.com. When I build something, I take it all the way to
+            running in the real world, not just working on my laptop.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <!-- PROJECTS -->
+    <!-- WORK -->
     <section id="work" class="section">
-      <h2 class="section-display">Projects</h2>
+      <h2 class="section-display">Work</h2>
 
       <!-- Featured: COMPUTA -->
       <article class="featured">
@@ -97,8 +118,36 @@
         </div>
       </article>
 
-      <!-- Detailed project blocks, icon links to GitHub -->
       <div class="details">
+        <!-- Enterprise Network (above the OOP projects) -->
+        <article class="detail">
+          <h3 class="detail-title">Enterprise Network Automation</h3>
+          <div class="detail-grid">
+            <div class="detail-text">
+              <p>
+                A two-part networking project. The first is an enterprise
+                network designed and simulated in Cisco Packet Tracer, built
+                from routers, core and distribution switches, and edge devices.
+                The second is a Python automation script that connects to live
+                Cisco devices with Netmiko, captures their running configurations
+                into date-stamped backups every night, and flags configuration
+                drift by comparing each day against the last. It handles timeouts
+                and authentication failures gracefully and reports a summary of
+                every run. Built alongside earning my CCNA certification.
+              </p>
+              <ul class="tags"><li>Cisco</li><li>Python</li><li>Netmiko</li></ul>
+            </div>
+            <div class="detail-media">
+              <a class="media-img video-thumb" href="https://youtu.be/D7QOxmmnj3Q" target="_blank" rel="noopener">
+                <img src="network-demo-thumb.jpg" loading="lazy" alt="Enterprise network automation demo video" />
+                <span class="play" aria-hidden="true"></span>
+              </a>
+              <span class="media-caption"><a href="https://youtu.be/D7QOxmmnj3Q">Watch demo</a> &middot; <a href="https://github.com/austinraben/enterprise-network-automation">Repository</a></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Restaurant (OOP) -->
         <article class="detail">
           <h3 class="detail-title">Restaurant Management System</h3>
           <div class="detail-grid">
@@ -133,6 +182,7 @@
           </div>
         </article>
 
+        <!-- Music (OOP) -->
         <article class="detail">
           <h3 class="detail-title">Music Library System</h3>
           <div class="detail-grid">
@@ -147,46 +197,25 @@
                 entirely by hand without GenAI. It was a two-person project for
                 the same software engineering course, and I implemented the
                 majority of the system, including the core library model,
-                playlist management, user accounts, and play tracking.
+                playlist management, user accounts, and play tracking. The full
+                class design is captured in a
+                <a href="music-uml.pdf" target="_blank" rel="noopener">UML class diagram</a>.
               </p>
               <ul class="tags"><li>Java</li><li>OOP</li><li>MVC</li></ul>
             </div>
-            <div class="detail-media">
-              <a class="media-img" href="music-uml.png" target="_blank" rel="noopener">
-                <img src="music-uml.png" loading="lazy" alt="UML class diagram for the music library system" />
-              </a>
-              <span class="media-caption">UML class diagram &middot; <a href="https://github.com/austinraben/music-library-system">View Repository</a></span>
-            </div>
+            <a class="detail-repo" href="https://github.com/austinraben/music-library-system">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 33V13l17-4v18" />
+                  <circle cx="15" cy="33" r="5" /><circle cx="32" cy="29" r="5" />
+                </svg>
+              </span>
+              <span class="detail-repo-label">View Repository</span>
+            </a>
           </div>
         </article>
 
-        <article class="detail">
-          <h3 class="detail-title">Enterprise Network Automation</h3>
-          <div class="detail-grid">
-            <div class="detail-text">
-              <p>
-                A two-part networking project. The first is an enterprise
-                network designed and simulated in Cisco Packet Tracer, built
-                from routers, core and distribution switches, and edge devices.
-                The second is a Python automation script that connects to live
-                Cisco devices with Netmiko, captures their running configurations
-                into date-stamped backups every night, and flags configuration
-                drift by comparing each day against the last. It handles timeouts
-                and authentication failures gracefully and reports a summary of
-                every run. Built alongside earning my CCNA certification.
-              </p>
-              <ul class="tags"><li>Cisco</li><li>Python</li><li>Netmiko</li></ul>
-            </div>
-            <div class="detail-media">
-              <a class="media-img video-thumb" href="https://youtu.be/D7QOxmmnj3Q" target="_blank" rel="noopener">
-                <img src="network-demo-thumb.jpg" loading="lazy" alt="Enterprise network automation demo video" />
-                <span class="play" aria-hidden="true"></span>
-              </a>
-              <span class="media-caption"><a href="https://youtu.be/D7QOxmmnj3Q">Watch demo</a> &middot; <a href="https://github.com/austinraben/enterprise-network-automation">Repository</a></span>
-            </div>
-          </div>
-        </article>
-
+        <!-- Baseball -->
         <article class="detail">
           <h3 class="detail-title">Baseball Performance Analytics</h3>
           <div class="detail-grid">
@@ -229,21 +258,24 @@
     <section id="experience" class="section">
       <h2 class="section-display">Experience &amp; Education</h2>
       <div class="timeline">
-        <article class="entry">
-          <div class="entry-head">
-            <h3 class="entry-role">Network Technician</h3>
-            <span class="entry-meta">RabenIT &middot; Phoenix, Arizona &middot; 2024 to Present</span>
+        <article class="entry entry-with-photo">
+          <div class="entry-main">
+            <div class="entry-head">
+              <h3 class="entry-role">Network Technician</h3>
+              <span class="entry-meta">RabenIT &middot; Phoenix, Arizona &middot; 2024 to Present</span>
+            </div>
+            <p>
+              Layer 1 and layer 2 network work across client sites. I troubleshoot
+              connectivity with Cisco IOS and Wireshark, install and terminate
+              Cat6 and fiber, crimp RJ45, and validate links with toners, cable
+              testers, and certification testers. I maintain MDF, IDF, and server
+              room standards including rack layout, labeling, and cable management,
+              handle TV installations, and keep clients updated through each job.
+              The work has sharpened my troubleshooting instincts, attention to
+              detail, and comfort communicating with clients under pressure.
+            </p>
           </div>
-          <p>
-            Layer 1 and layer 2 network work across client sites. I troubleshoot
-            connectivity with Cisco IOS and Wireshark, install and terminate
-            Cat6 and fiber, crimp RJ45, and validate links with toners, cable
-            testers, and certification testers. I maintain MDF, IDF, and server
-            room standards including rack layout, labeling, and cable management,
-            handle TV installations, and keep clients updated through each job.
-            The work has sharpened my troubleshooting instincts, attention to
-            detail, and comfort communicating with clients under pressure.
-          </p>
+          <img class="entry-photo landscape" src="network-cabling.jpg" loading="lazy" alt="Ethernet cabling terminated into a network switch" />
         </article>
         <article class="entry">
           <div class="entry-head">
@@ -277,20 +309,20 @@
       <h2 class="section-display">Skills</h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h3>Languages</h3>
-          <p>Java &middot; Python &middot; C &middot; JavaScript &middot; TypeScript</p>
-        </div>
-        <div class="skill-group">
-          <h3>Web</h3>
-          <p>React &middot; Next.js &middot; Node.js &middot; NestJS &middot; HTML &amp; CSS</p>
-        </div>
-        <div class="skill-group">
           <h3>Networking</h3>
-          <p>Cisco IOS &middot; Wireshark &middot; VLANs &middot; Cat6 &amp; fiber termination &middot; Cable &amp; certification testing</p>
+          <p>Cisco IOS &middot; TCP/IP &middot; VLANs &middot; OSPF &middot; ACLs &middot; NAT &middot; DHCP &middot; DNS &middot; Wireshark &middot; Cat6 &amp; fiber termination &middot; Cable &amp; certification testing</p>
         </div>
         <div class="skill-group">
-          <h3>Data &amp; Tools</h3>
-          <p>MongoDB &middot; SQL &middot; Docker &middot; Git &middot; Linux &middot; Tailscale</p>
+          <h3>Languages</h3>
+          <p>Python &middot; Java &middot; C &middot; JavaScript &middot; TypeScript &middot; Bash &middot; SQL</p>
+        </div>
+        <div class="skill-group">
+          <h3>Software &amp; Web</h3>
+          <p>OOP &middot; MVC &middot; design patterns &middot; React &middot; Next.js &middot; Node.js &middot; NestJS &middot; MongoDB</p>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; Systems</h3>
+          <p>Netmiko &middot; Docker &middot; Git &middot; Linux &middot; Tailscale &middot; PuTTY &middot; UniFi Controller &middot; Packet Tracer</p>
         </div>
       </div>
     </section>
@@ -333,35 +365,6 @@
             </div>
             <p>Recognized as Most Outstanding Risk Management among 22 fraternities at the University of Arizona.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2 class="section-display">About</h2>
-      <div class="about-grid">
-        <div class="about-photo">
-          <img src="headshot.jpg" loading="lazy" alt="Austin Raben" />
-        </div>
-        <div class="prose">
-        <p>
-          I am a computer science graduate of the University of Arizona, where I
-          also minored in business administration. My focus is networking: I
-          earned my CCNA and work as a network technician at RabenIT, handling
-          layer 1 and layer 2 infrastructure and helping people make sense of
-          their technology.
-        </p>
-        <p>
-          I like understanding systems all the way down, from the
-          object-oriented design of an application to the physical and data-link
-          layers of a network. Off the clock I am laid back and easy to work
-          with, a big sports fan (basketball, football, and baseball, which is
-          part of what drew me to the baseball analytics work), and I run my own
-          corner of the internet, including this site and my email at
-          austinraben.com. When I build something, I take it all the way to
-          running in the real world, not just working on my laptop.
-        </p>
         </div>
       </div>
     </section>
@@ -410,5 +413,6 @@
       reveal();
     })();
   </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
