@@ -1,25 +1,15 @@
 /* ---- Theme tokens ---- */
 :root {
-  --bg: #f4f0e8;
-  --bg-soft: #ece6da;
-  --text: #1c1a16;
-  --muted: #6d675c;
-  --border: #ddd5c6;
-  --shadow: rgba(40, 33, 20, 0.14);
+  color-scheme: dark;
+  --bg: #191712;
+  --bg-soft: #221f18;
+  --text: #efe9db;
+  --muted: #a49c8b;
+  --border: #34302a;
+  --shadow: rgba(0, 0, 0, 0.45);
   --maxw: 900px;
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #191712;
-    --bg-soft: #221f18;
-    --text: #efe9db;
-    --muted: #a49c8b;
-    --border: #34302a;
-    --shadow: rgba(0, 0, 0, 0.4);
-  }
 }
 
 /* ---- Base ---- */
@@ -235,13 +225,26 @@ main {
   gap: 16px;
   padding: 30px 20px;
 }
+.detail-actions { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.btn-uml {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.btn-uml:hover { border-color: var(--text); background: var(--bg-soft); }
 .detail-static .icon svg { width: 60px; height: 60px; }
 
 /* Alternate the icon side for editorial rhythm */
 .detail:nth-child(even) .detail-grid { grid-template-columns: 1fr 1.7fr; }
 .detail:nth-child(even) .detail-repo,
 .detail:nth-child(even) .detail-static,
-.detail:nth-child(even) .detail-media { order: -1; }
+.detail:nth-child(even) .detail-media,
+.detail:nth-child(even) .detail-actions { order: -1; }
 
 /* Project media (images / video thumbnails in the detail blocks) */
 .detail-media { display: flex; flex-direction: column; align-items: center; gap: 12px; }
