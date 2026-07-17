@@ -4,18 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Austin Raben</title>
-  <meta name="description" content="Austin Raben — Computer Science at the University of Arizona, CCNA certified. Software and networking projects." />
+  <meta name="description" content="Austin Raben — Network technician and computer science graduate, CCNA certified. Networking and software projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <header class="site-header">
     <a href="#top" class="brand">Austin Raben</a>
     <nav class="nav">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -23,117 +25,187 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <h1>Austin&nbsp;Raben</h1>
-      <p class="lede">
-        Computer Science graduate from the University of Arizona, CCNA
-        certified. I work across both software and networking, from
-        object-oriented programming and web apps to network configuration and
-        automation.
+      <h1 class="display">Austin Raben</h1>
+      <p class="hero-tag">
+        Network technician and computer science graduate, CCNA certified with a
+        business administration minor. Networking is my strength, and I am
+        well-rounded across software and computer science, from configuring and
+        automating networks to building and shipping full applications.
       </p>
+      <div class="hero-meta">
+        <span>University of Arizona</span>
+        <span class="dot">&middot;</span>
+        <span>Open to relocation for full-time roles</span>
+      </div>
       <div class="hero-links">
-        <a class="btn" href="#work">View my work</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        <a href="https://github.com/austinraben">GitHub</a>
+        <a href="https://linkedin.com/in/austinraben">LinkedIn</a>
+        <a href="https://www.youtube.com/@austinraben">YouTube</a>
+        <a href="Austin-Raben-Resume.pdf" download>R&eacute;sum&eacute;</a>
+        <a href="mailto:austin@austinraben.com">Email</a>
       </div>
     </section>
 
-    <!-- WORK -->
+    <!-- PROJECTS -->
     <section id="work" class="section">
-      <h2 class="section-title">Work</h2>
+      <h2 class="section-display">Projects</h2>
 
       <!-- Featured: COMPUTA -->
-      <article class="project project-featured">
-        <div class="project-body">
-          <div class="project-head">
-            <h3>COMPUTA</h3>
-            <span class="badge">Flagship</span>
+      <article class="featured">
+        <h3 class="featured-title">COMPUTA</h3>
+        <div class="featured-grid">
+          <div class="featured-text">
+            <p>
+              A personal AI assistant I built and run on my own NAS, a home
+              server I can SSH into from anywhere. COMPUTA is a Next.js app
+              containerized with Docker, reachable over Tailscale, and connected
+              to my calendar and tasks. The same NAS self-hosts a Plex media
+              server and stores the timelapse footage from my 3D printer, pulled
+              off the printer's flash drive over FTP. It all runs on my own
+              hardware, under my own control.
+            </p>
+            <ul class="tags">
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>Docker</li>
+              <li>Tailscale</li>
+              <li>AI</li>
+            </ul>
+            <p class="note">Private project. Demo available on request.</p>
           </div>
-          <p>
-            A personal AI assistant I built and run on my own NAS. A Next.js app
-            containerized with Docker, reachable from anywhere over Tailscale,
-            and connected to my calendar and tasks. It runs on my own hardware,
-            under my own control.
-          </p>
-          <ul class="tags">
-            <li>Next.js</li>
-            <li>TypeScript</li>
-            <li>Docker</li>
-            <li>Tailscale</li>
-            <li>AI</li>
-          </ul>
-          <p class="project-note">Private project. Demo available on request.</p>
-        </div>
-        <div class="project-shots">
-          <img class="shot shot-desktop" src="computa-desktop.png" loading="lazy"
-               alt="COMPUTA desktop dashboard: the assistant orb, upcoming calendar events, active projects, and tasks" />
-          <img class="shot shot-mobile" src="computa-mobile.jpeg" loading="lazy"
-               alt="COMPUTA on mobile adding a calendar event and confirming it synced to Outlook Calendar" />
+          <div class="project-shots">
+            <img class="shot shot-desktop" src="computa-desktop.png" loading="lazy"
+                 alt="COMPUTA desktop dashboard: the assistant orb, upcoming calendar events, active projects, and tasks" />
+            <img class="shot shot-mobile" src="computa-mobile.jpeg" loading="lazy"
+                 alt="COMPUTA on mobile adding a calendar event and confirming it synced to Outlook Calendar" />
+          </div>
         </div>
       </article>
 
-      <!-- Grid of the rest -->
-      <div class="project-grid">
-        <article class="project">
-          <div class="project-head">
-            <h3>Restaurant Management System</h3>
+      <!-- Detailed project blocks, icon links to GitHub -->
+      <div class="details">
+        <article class="detail">
+          <h3 class="detail-title">Restaurant Management System</h3>
+          <div class="detail-grid">
+            <div class="detail-text">
+              <p>
+                A command-line application for running a restaurant from the
+                perspective of a manager, host, and server. It handles the full
+                floor workflow: seating customers, assigning servers to tables,
+                taking and modifying orders against a live menu, splitting
+                checks, collecting tips, and applying happy hour pricing, with
+                manager tools for hiring, sales tracking, and secure login.
+                Built in Java with an MVC structure and object-oriented design,
+                and written entirely by hand without GenAI. It was a four-person
+                group project for an upper-division software engineering course.
+                I built the menu system, implemented the Happy Hour feature using
+                the Decorator design pattern, added input validation, and wrote a
+                large share of the unit tests.
+              </p>
+              <ul class="tags"><li>Java</li><li>OOP</li><li>MVC</li></ul>
+            </div>
+            <a class="detail-repo" href="https://github.com/austinraben/restaurant-management-system">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 6v7M20 6v7M24 6v7" />
+                  <path d="M16 13c0 2.2 1.8 3.5 4 3.5s4-1.3 4-3.5" />
+                  <path d="M20 16.5V42" />
+                  <path d="M33 42V6c-3.2 2-4.8 7.5-4.8 12.5 0 3 1.8 4.5 4.8 4.5" />
+                </svg>
+              </span>
+              <span class="detail-repo-label">View Repository</span>
+            </a>
           </div>
-          <p>
-            A command-line restaurant point of sale simulation in Java. Manager,
-            host, and server roles with live ordering, split billing, and happy
-            hour pricing. Object-oriented and MVC, built without GenAI.
-          </p>
-          <p class="role">
-            My role: team lead. I built the project skeleton, the salted and
-            hashed authentication, and the happy hour feature, and coordinated
-            the team.
-          </p>
-          <ul class="tags">
-            <li>Java</li>
-            <li>OOP</li>
-            <li>MVC</li>
-          </ul>
-          <a class="project-link" href="https://github.com/austinraben/restaurant-management-system">View on GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
-            <h3>Music Library System</h3>
+        <article class="detail">
+          <h3 class="detail-title">Music Library System</h3>
+          <div class="detail-grid">
+            <div class="detail-text">
+              <p>
+                A Java application that models the data behind a music streaming
+                service. Users browse a music store, add albums and songs to a
+                personal library, build and manage playlists, rate songs, and
+                track their listening history across individual user accounts.
+                The design separates the source catalog from each user's
+                personal collection and follows an MVC structure, written
+                entirely by hand without GenAI. It was a two-person project for
+                the same software engineering course, and I implemented the
+                majority of the system, including the core library model,
+                playlist management, user accounts, and play tracking.
+              </p>
+              <ul class="tags"><li>Java</li><li>OOP</li><li>MVC</li></ul>
+            </div>
+            <a class="detail-repo" href="https://github.com/austinraben/music-library-system">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 33V13l17-4v18" />
+                  <circle cx="15" cy="33" r="5" /><circle cx="32" cy="29" r="5" />
+                </svg>
+              </span>
+              <span class="detail-repo-label">View Repository</span>
+            </a>
           </div>
-          <p>
-            A Java music library and playlist manager, essentially the data model
-            behind a streaming service. Browse a catalog, build a personal
-            library, make playlists, rate songs, and track listening history.
-            Built without GenAI.
-          </p>
-          <p class="role">
-            My role: on a two person team, I implemented most of the system,
-            including the core library model, playlists, user accounts, and play
-            tracking.
-          </p>
-          <ul class="tags">
-            <li>Java</li>
-            <li>OOP</li>
-          </ul>
-          <a class="project-link" href="https://github.com/austinraben/music-library-system">View on GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
-            <h3>Enterprise Network Automation</h3>
+        <article class="detail">
+          <h3 class="detail-title">Enterprise Network Automation</h3>
+          <div class="detail-grid">
+            <div class="detail-text">
+              <p>
+                A two-part networking project. The first is an enterprise
+                network designed and simulated in Cisco Packet Tracer, built
+                from routers, core and distribution switches, and edge devices.
+                The second is a Python automation script that connects to live
+                Cisco devices with Netmiko, captures their running configurations
+                into date-stamped backups every night, and flags configuration
+                drift by comparing each day against the last. It handles timeouts
+                and authentication failures gracefully and reports a summary of
+                every run. Built alongside earning my CCNA certification.
+              </p>
+              <ul class="tags"><li>Cisco</li><li>Python</li><li>Netmiko</li></ul>
+            </div>
+            <a class="detail-repo" href="https://github.com/austinraben/enterprise-network-automation">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="10" r="4.5" /><circle cx="11" cy="37" r="4.5" /><circle cx="37" cy="37" r="4.5" />
+                  <line x1="22" y1="14" x2="13" y2="33" /><line x1="26" y1="14" x2="35" y2="33" /><line x1="15.5" y1="37" x2="32.5" y2="37" />
+                </svg>
+              </span>
+              <span class="detail-repo-label">View Repository</span>
+            </a>
           </div>
-          <p>
-            A Cisco enterprise network designed in Packet Tracer, paired with a
-            Python and Netmiko script that backs up device configs nightly and
-            flags configuration drift.
-          </p>
-          <p class="role">
-            Built alongside earning my CCNA certification.
-          </p>
-          <ul class="tags">
-            <li>Cisco</li>
-            <li>Python</li>
-            <li>Netmiko</li>
-          </ul>
-          <a class="project-link" href="https://github.com/austinraben/enterprise-network-automation">View on GitHub</a>
+        </article>
+
+        <article class="detail">
+          <h3 class="detail-title">Baseball Performance Analytics</h3>
+          <div class="detail-grid">
+            <div class="detail-text">
+              <p>
+                A data project with the Arizona Baseball Software Development
+                Team, where I was project manager leading a group of eight. We
+                built predictive performance models from TrackMan batted-ball
+                data, monitoring the TrackMan system and collecting stadium
+                measurements from Google Earth, which I processed. I wrote the
+                Python analysis and engineered an "xHR" metric that estimates
+                home run likelihood across more than 60 NCAA stadiums, and the
+                scalable formula behind it was adopted program-wide to support
+                data-driven player development. I also produced hitting reports
+                for the coaching staff and led many of the team's working calls.
+              </p>
+              <ul class="tags"><li>Python</li><li>Analytics</li><li>TrackMan</li></ul>
+            </div>
+            <div class="detail-static">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="24" cy="24" r="17" />
+                  <path d="M13.5 13c3 3 4.6 7 4.6 11s-1.6 8-4.6 11" />
+                  <path d="M34.5 13c-3 3-4.6 7-4.6 11s1.6 8 4.6 11" />
+                </svg>
+              </span>
+              <span class="detail-repo-label">Private project</span>
+            </div>
+          </div>
         </article>
       </div>
 
@@ -143,32 +215,129 @@
       </p>
     </section>
 
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience" class="section">
+      <h2 class="section-display">Experience &amp; Education</h2>
+      <div class="timeline">
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-role">Network Technician</h3>
+            <span class="entry-meta">RabenIT &middot; Phoenix, Arizona &middot; 2024 to Present</span>
+          </div>
+          <p>
+            Layer 1 and layer 2 network work across client sites. I troubleshoot
+            connectivity with Cisco IOS and Wireshark, install and terminate
+            Cat6 and fiber, crimp RJ45, and validate links with toners, cable
+            testers, and certification testers. I maintain MDF, IDF, and server
+            room standards including rack layout, labeling, and cable management,
+            handle TV installations, and keep clients updated through each job.
+          </p>
+        </article>
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-role">B.S. Computer Science, Minor in Business Administration</h3>
+            <span class="entry-meta">University of Arizona &middot; Tucson, Arizona &middot; 2022 to 2026</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="section-display">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <p>Java &middot; Python &middot; C &middot; JavaScript &middot; TypeScript</p>
+        </div>
+        <div class="skill-group">
+          <h3>Web</h3>
+          <p>React &middot; Next.js &middot; Node.js &middot; NestJS &middot; HTML &amp; CSS</p>
+        </div>
+        <div class="skill-group">
+          <h3>Networking</h3>
+          <p>Cisco IOS &middot; Wireshark &middot; VLANs &middot; Cat6 &amp; fiber termination &middot; Cable &amp; certification testing</p>
+        </div>
+        <div class="skill-group">
+          <h3>Data &amp; Tools</h3>
+          <p>MongoDB &middot; SQL &middot; Docker &middot; Git &middot; Linux &middot; Tailscale</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS & LEADERSHIP -->
+    <section id="credentials" class="section">
+      <h2 class="section-display">Credentials &amp; Leadership</h2>
+      <div class="cred-grid">
+        <div class="cred-text">
+          <h3 class="cred-title">Cisco Certified Network Associate</h3>
+          <p class="cred-meta">Certified March 2026 &middot; Valid through March 2029 &middot; Verification No. 05019a4e33ea4cbab12e13330f1ec903</p>
+          <p><a class="cred-link" href="https://www.cisco.com/go/verifycertificate">Verify this certification</a></p>
+        </div>
+        <a class="cred-cert" href="ccna-certificate.png" target="_blank" rel="noopener">
+          <img src="ccna-certificate.png" loading="lazy" alt="Austin Raben's Cisco Certified Network Associate certificate" />
+        </a>
+      </div>
+
+      <div class="leadership">
+        <h3 class="leadership-heading">Leadership &amp; Awards</h3>
+        <div class="timeline">
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">Trip Staff Leader</h3>
+              <span class="entry-meta">Mayanot / Chabad &middot; 2026</span>
+            </div>
+            <p>Led 50 participants on a 10-day international trip, managing logistics, scheduling, and group coordination.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">Philanthropy Coordinator</h3>
+              <span class="entry-meta">Zeta Beta Tau &middot; 2023 to 2024</span>
+            </div>
+            <p>Raised over $8,000 for the Children's Miracle Network through coordinated fundraising events.</p>
+          </article>
+          <article class="entry">
+            <div class="entry-head">
+              <h3 class="entry-role">Risk Management &amp; Wellness Director</h3>
+              <span class="entry-meta">Zeta Beta Tau &middot; 2022 to 2023</span>
+            </div>
+            <p>Recognized as Most Outstanding Risk Management among 22 fraternities at the University of Arizona.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ABOUT -->
     <section id="about" class="section">
-      <h2 class="section-title">About</h2>
+      <h2 class="section-display">About</h2>
       <div class="prose">
         <p>
-          I am a computer science graduate of the University of Arizona with a
-          foot in both software and networking. I earned my CCNA, and I have
-          worked as a network technician at RabenIT handling layer 1 and layer 2
-          infrastructure.
+          I am a computer science graduate of the University of Arizona, where I
+          also minored in business administration. My focus is networking: I
+          earned my CCNA and work as a network technician at RabenIT, handling
+          layer 1 and layer 2 infrastructure and helping people make sense of
+          their technology.
         </p>
         <p>
-          I like understanding systems all the way down, whether that is the
-          object-oriented design of an application or the physical and data-link
-          layers of a network. When I build something, I take it all the way to
-          running in the real world, not just working on my laptop.
+          I like understanding systems all the way down, from the
+          object-oriented design of an application to the physical and data-link
+          layers of a network. Off the clock I am laid back and easy to work
+          with, and I run my own corner of the internet, including this site and
+          my email at austinraben.com. When I build something, I take it all the
+          way to running in the real world, not just working on my laptop.
         </p>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-display">Contact</h2>
       <ul class="contact-list">
         <li><span>Email</span><a href="mailto:austin@austinraben.com">austin@austinraben.com</a></li>
         <li><span>GitHub</span><a href="https://github.com/austinraben">github.com/austinraben</a></li>
         <li><span>LinkedIn</span><a href="https://linkedin.com/in/austinraben">linkedin.com/in/austinraben</a></li>
+        <li><span>YouTube</span><a href="https://www.youtube.com/@austinraben">youtube.com/@austinraben</a></li>
+        <li><span>R&eacute;sum&eacute;</span><a href="Austin-Raben-Resume.pdf" download>Download PDF</a></li>
       </ul>
     </section>
   </main>
@@ -176,5 +345,33 @@
   <footer class="site-footer">
     <p>&copy; 2026 Austin Raben</p>
   </footer>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll(
+        '.section-display, .featured, .detail, .entry, .skill-group, .cred-grid, .leadership, .prose, .other-work, .contact-list'
+      );
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var ticking = false;
+      function reveal() {
+        var h = window.innerHeight || document.documentElement.clientHeight;
+        els.forEach(function (el) {
+          if (el.classList.contains('is-visible')) return;
+          if (el.getBoundingClientRect().top < h * 0.9) el.classList.add('is-visible');
+        });
+        ticking = false;
+      }
+      function onScroll() {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(reveal); }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      reveal();
+    })();
+  </script>
 </body>
 </html>
