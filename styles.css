@@ -362,6 +362,7 @@ main {
   max-width: 680px;
   margin: 0 auto;
 }
+.skills-grid .skill-group.full { grid-column: 1 / -1; }
 .skill-group h3 {
   font-family: var(--serif);
   font-size: 1.25rem;
@@ -464,6 +465,7 @@ html.js .is-visible {
 html.js .skills-grid .skill-group:nth-child(2) { transition-delay: 0.08s; }
 html.js .skills-grid .skill-group:nth-child(3) { transition-delay: 0.16s; }
 html.js .skills-grid .skill-group:nth-child(4) { transition-delay: 0.24s; }
+html.js .skills-grid .skill-group:nth-child(5) { transition-delay: 0.32s; }
 @media (prefers-reduced-motion: reduce) {
   html.js .section-display,
   html.js .featured,
